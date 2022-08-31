@@ -19,6 +19,21 @@ represent as $ceil(p∗NP)(NP_1)$ and $NP−NP_1(NP_2)$. Ceil rounds the number 
 <p align="center"> $x_{i,k}^{t+1}=x_{r_2, k}^t$ </p>  
 
   * Where $r_2$ means a butterfly from suopopulation2.
+  
+  #### Adjustment operator: 
+  * Monarch butterflies position is adjusted by this operator. The procedure is described as the following: for every $j$ monarch butterfly, if the random number is less than or equal than $p$ ratio then:
+  
+<p align="center"> $x_{j,k}^{t+1}=x_{best, k}^t$ </p>  
+
+  * The second part of the equation $(x_{best, k}^t)$ indicates the $k$ element of $x_{best}$, this is the best butterfly in the two subpopulations. On the other hand, if the generated number is greater than $p$, then:
+
+<p align="center"> $x_{j,k}^{t+1}=x_{r_3, k}^t$ </p>  
+
+  * Where $r_3$ butterfly is chosen randomly from subpopulation2. Under this condition, if the random number is greater than $BAR$, being $BAR$ a butterfly adjustment value, we can update as follows:
+  
+ <p align="center"> $x_{j,k}^{t+1}=x_{j,k}^{t+1} + \alpha (dx_k -0.5)$</p> 
+ 
+  * $Dx$ indicates the length of the butterfly walk, it can be computed with Lévy flight. The value of $\alpha$ is a weight that can be calculated as $\alpha = S_{max}/t^2$ where $S_{max}$ is the length of the maximum walk that a butterfly can take, and $t$ is the actual generation.
 
 ### Data Sets:
   * Parkinsons – data used to distinguish presence or absence
