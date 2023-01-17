@@ -7,11 +7,11 @@ Seed=218728273;
 
 if [[ $1 -eq 1 ]]
 then
-	./main $Seed 1 > heart_results.txt &
-	./main $Seed 2 > parkinsons_results.txt &
-	./main $Seed 3 > ionosphere_results.txt
+	./bin/mbo $Seed 1 > heart_results.txt &
+	./bin/mbo $Seed 2 > parkinsons_results.txt &
+	./bin/mbo $Seed 3 > ionosphere_results.txt
 else
-	./main $Seed 1 > heart_results.txt 
-	./main $Seed 2 > parkinsons_results.txt 
-	./main $Seed 3 > ionosphere_results.txt
+	./bin/mbo $Seed 1 > heart_results.txt 
+	./bin/mbo $Seed 2 > parkinsons_results.txt 
+	./bin/mbo $Seed 3 > ionosphere_results.txt
 fi
