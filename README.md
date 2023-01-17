@@ -53,9 +53,9 @@ attributes and 2 classes.
 
 1 - To compile run "make" in the terminal.
 
-2 - To run the program go to the terminal and run "./bin/mbo <seed> <parameter>" where
-<seed> is the seed we choose and
-<parameter> can be:
+2 - To run the program go to the terminal and run "./bin/mbo (seed) (parameter)" where
+(seed) is the seed we choose and
+(parameter) can be:
 		-> 1: spectf-heart
 		-> 2: parkinsons
 		-> 3: ionosphere
